@@ -1,0 +1,11 @@
+The `fourSum` function is designed to find all unique quadruplets in the array `nums` that add up to a given target.
+
+The function starts by defining a helper function `findNsum` that is used to find N numbers in the sorted array `nums` that add up to the target. This function is recursive and reduces the problem of finding N numbers to finding N-1 numbers, and so on, until it becomes a 2Sum problem.
+
+The `findNsum` function starts with some early termination conditions for efficiency. If the length of `nums` is less than N, or if N is less than 2, or if the target is less than the smallest possible sum (which is the first element in `nums` times N) or greater than the largest possible sum (which is the last element in `nums` times N), then the function returns immediately as no solution is possible.
+
+If N equals 2, the function uses a two-pointer technique to solve the 2Sum problem. It initializes two pointers, `l` and `r`, to the start and end of `nums`, respectively. Then it enters a loop that continues as long as `l` is less than `r`. Inside the loop, it calculates the sum of the numbers at the `l` and `r` indices. If the sum equals the target, it adds the current pair to the results list and moves the `l` pointer to the right to continue the search. If the sum is less than the target, it moves the `l` pointer to the right to increase the sum. If the sum is greater than the target, it moves the `r` pointer to the left to decrease the sum.
+
+If N is greater than 2, the function enters a loop that iterates over `nums`. For each number, it recursively calls `findNsum` with N reduced by 1 and the target reduced by the current number. This effectively reduces the problem to finding N-1 numbers that add up to the new target.
+
+The `fourSum` function itself initializes an empty list to store the results, then calls `findNsum` with N set to 4, and finally returns the results list. The `nums` array is sorted before being passed to `findNsum` to make it easier to avoid duplicate quadruplets and to control the movement of pointers.
