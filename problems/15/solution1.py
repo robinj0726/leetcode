@@ -1,3 +1,7 @@
+# The time complexity of the `threeSum` function is O(n^2), where n is the length of the input array `nums`. This is because we have nested loops that iterate through the array, resulting in a quadratic time complexity.
+# The space complexity of the `threeSum` function is O(log n), where n is the length of the input array `nums`. This is because we sort the array in place, which takes O(log n) space.
+# The `threeSum` function takes an array of integers `nums` as input and returns a list of lists containing all unique triplets in the array which gives the sum of zero. If no such triplets are found, an empty list is returned.
+
 def threeSum(nums):
     # Sort the array in ascending order
     nums.sort()

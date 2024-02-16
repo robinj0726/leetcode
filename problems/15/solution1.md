@@ -19,7 +19,3 @@ If the sum is less than zero, the `left` pointer is moved to the right. This is 
 If the sum is greater than zero, the `right` pointer is moved to the left. This is because moving the `right` pointer to the left will decrease the sum.
 
 After all iterations are done, the function returns the `triplets` list, which contains all unique triplets in `nums` that add up to zero.
-
-The time complexity of the `threeSum` function is O(n^2), where n is the length of the input array `nums`. This is because we have nested loops that iterate through the array, resulting in a quadratic time complexity.
-
-As for the code that would fit at `$PLACEHOLDER$`, it seems that there is no additional code needed at that location. The function `threeSum` is already complete and returns the list of triplets that satisfy the given condition.
