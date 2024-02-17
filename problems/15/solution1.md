@@ -19,3 +19,9 @@ If the sum is less than zero, the `left` pointer is moved to the right. This is 
 If the sum is greater than zero, the `right` pointer is moved to the left. This is because moving the `right` pointer to the left will decrease the sum.
 
 After all iterations are done, the function returns the `triplets` list, which contains all unique triplets in `nums` that add up to zero.
+
+The time complexity of the `threeSum` function is O(n^2), where n is the length of the input array `nums`. This is because we have nested loops that iterate through the array, resulting in a quadratic time complexity.
+
+The space complexity of the `threeSum` function is O(log n), where n is the length of the input array `nums`. This is because we sort the array in place, which takes O(log n) space.
+
+The `threeSum` function takes an array of integers `nums` as input and returns a list of lists containing all unique triplets in the array which gives the sum of zero. If no such triplets are found, an empty list is returned.
