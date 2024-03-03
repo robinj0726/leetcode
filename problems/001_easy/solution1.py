@@ -1,10 +1,10 @@
 def twoSum(nums, target):
-    num_dict = {}
+    map = {}
     for i, num in enumerate(nums):
         complement = target - num
-        if complement in num_dict:
-            return [num_dict[complement], i]
-        num_dict[num] = i
+        if complement in map:
+            return [map[complement], i]
+        map[num] = i
     return []
 
 # Example usage:
