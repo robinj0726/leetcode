@@ -7,5 +7,9 @@
 ## Meson
 
 ```
+// setup the project
 meson setup builddir --backend=vs
+
+// reconfigure the project if adding more files
+meson setup --reconfigure builddir
 ```
